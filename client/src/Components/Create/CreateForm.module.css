@@ -1,0 +1,56 @@
+.Form{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-color:  rgb(235, 243, 242);
+}
+
+.BtnSub{
+    margin: 10px 100px 50px 200px;
+    position: relative;
+    width: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Types{
+    border: 2px solid black;
+    margin: 10px 10px 5px 150px;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    width:400px;
+    height: 100px;
+    background-color: rgb(235, 243, 242);
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Container{
+    border-radius: 20px;
+    border: 2px solid rgb(10, 8, 5);
+    margin: 10px 10px 10px 100px;
+    flex-direction: column;
+    display: flex;
+    width: 500px;
+    height: 250px;
+    background-color: rgb(235, 243, 242);
+    
+    
+}
+
+.Field{
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: inline;
+}
+.danger{
+    color: red;
+}
+
+.Label{
+    display: flex;
+    margin: auto;
+
+    margin-left: 220px;
+}

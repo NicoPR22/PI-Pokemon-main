@@ -1,0 +1,73 @@
+.divStile {
+  margin: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: 250px;
+  background-color: rgb(242, 247, 248);
+  border: 2px solid black;
+  
+    
+}
+
+.imgStyle {
+  display: flex;
+    width: 150px;
+    height:150p;
+    margin: auto;
+    
+  }
+
+.pStyle {
+  justify-content: center;
+    display:inline;
+    margin:5px 5px;
+    flex-direction: row;
+  }
+
+  .Idpk{
+    display: flex;
+    flex-direction: row;
+    margin-left:  30px;
+    align-self: auto;
+  }
+
+  .PkmName{
+    display: flex;
+    justify-content: center;
+  }
+
+  .Types{
+    display: flex;
+    justify-content: center;
+  }
+
+  .DivTypes{
+    justify-content: center;
+  }
+
+  .Ptypes{
+    display: flex;
+    justify-content: center;
+  }
+
+  .UpDiv{
+    width: 260px;
+    height: 20px;
+    background-color: red;
+    border-radius: 20px 20px 0px 0px;
+    margin: auto;
+    display: flex;
+  }
+
+  .DownDiv{
+        
+        display: flex;
+        height: 20px;
+        background-color: #0c0b0b;
+        border-radius: 0px 0px 20px 20px;
+        width: 260px;
+        margin: auto;
+        align-self: auto;
+        margin-bottom: 20px;
+  }
+  

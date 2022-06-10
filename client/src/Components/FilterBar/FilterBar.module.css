@@ -1,0 +1,44 @@
+.Container{
+  border: 5px solid black;
+  border-radius: 5px;
+  display: flex;
+  margin: 5px 105px;
+  justify-content: center;
+  background-color: rgb(244, 250, 249);
+  padding: 2px;
+  border-top-color: rgb(131, 51, 5);
+  border-left-color: rgb(131, 51, 5);;
+}
+
+.DivStyle {
+  
+    width:'500px';
+    height: 'maxheigth';
+    display: 'flex';
+    flex-direction: 'row';
+    flex-wrap: 'wrap'
+  }
+
+.Sort {
+  margin: auto;
+    display: inline;
+    
+}
+
+.FilterDiv  {
+  margin: auto;
+  display: inline;
+
+}
+
+.SubContainer{
+  margin: auto;
+  display: flex;
+}
+.FiltLabel{
+  margin-right: 10px;
+}
+
+.Label{
+  margin-right: 2.5px;
+}

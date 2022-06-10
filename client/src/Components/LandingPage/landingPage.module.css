@@ -1,0 +1,36 @@
+
+
+.Start{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('../../Images/VvoxTdT.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+}
+
+.Button{   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    background-color: aliceblue;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: 22px;
+    border-style: double;
+    border-color: rgb(255, 251, 0);
+    border-width: 7px;
+}
+
+.Divbtn{
+    border-radius: 50%;
+    width: 125px;
+    height: 125px; 
+    margin: 405px 621px;
+}
+
+
+
+
+

@@ -1,0 +1,78 @@
+.Container{
+    border: 3px solid black;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.DivImage{
+   
+    align-items:center;
+    
+    display:inline-block;
+    box-shadow: 3px black ;
+    width: max-content;
+}
+
+s.Image{
+    
+    height:500px;
+    width:500px
+}
+
+.StatsDiv{
+   margin-left:  20px;
+    align-items: center;
+   
+ 
+    width: 150px;
+    
+}
+
+.TypesDiv{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 150px;
+    
+    
+}
+
+.SubContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.PokName{
+    display: flex;
+    justify-content: center;
+}
+
+.PokId{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.TypeNom{
+    margin: 5px;
+}
+
+.Field{
+    display: flex;
+    margin: auto;
+
+}
+.p{
+    margin: auto;
+    display: flex;
+}
+
+.span{
+    display: flex;
+    margin: auto;
+}

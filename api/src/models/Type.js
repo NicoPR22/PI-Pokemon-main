@@ -3,7 +3,7 @@ const { DataTypes, UniqueConstraintError } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('tipo', {
+  sequelize.define('type', {
     ID: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
