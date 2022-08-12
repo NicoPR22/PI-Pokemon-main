@@ -11,9 +11,9 @@ const FilterBar = ({sortBy, invert, filter, filterBySrc})=> {
                 <label className={s.FiltLabel}>Filtrar por:</label>
                 <div className={s.FilterDiv}>
                     <label className={s.Label}>Tipo</label>
-                    <select name="" id="" onChange={e=>filter(e)}>
+                    <select className={s.select} name="" id="" onChange={e=>filter(e)}>
                         <optgroup>
-                            <option id="opall" value="all">Todos</option>
+                            <option id="" value="all">Todos</option>
                             {
                                 types&&types.map(e=>{return(<option value={e}>{e}</option>)})
                             }
@@ -22,7 +22,7 @@ const FilterBar = ({sortBy, invert, filter, filterBySrc})=> {
                 </div>
                 <div className={s.FilterDiv}>
                     <label className={s.Label}>Origen</label>
-                    <select name="" id="" onChange={e=>{filterBySrc(e)}}>
+                    <select className={s.select} name="" id="" onChange={e=>{filterBySrc(e)}}>
                         <optgroup>
                             <option value="all">Todos</option>
                             <option value="api">Api</option>
@@ -33,9 +33,11 @@ const FilterBar = ({sortBy, invert, filter, filterBySrc})=> {
             </div>
             <div className={s.Sort}>
                 <label className={s.FiltLabel}>Ordenar por:</label>
-                <button value="abc" onClick={(e)=> sortBy(e.target.value)}>A/Z</button>
-                <button value="id"  onClick={(e)=> sortBy(e.target.value)}>Fuerza</button>
-                <button onClick={()=> invert()}>A-Z/Z-A</button>
+                <div className={s.buttons}>
+                    <button className={s.button} value="abc" onClick={(e)=> sortBy(e.target.value)}>A/Z</button>
+                    <button  className={s.button}value="id"  onClick={(e)=> sortBy(e.target.value)}>Fuerza</button>
+                    <button className={s.button } onClick={()=> invert()}>A-Z/Z-A</button>
+                </div>
                  
             </div>
         </div>

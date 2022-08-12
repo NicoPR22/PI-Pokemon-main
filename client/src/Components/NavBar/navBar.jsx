@@ -9,8 +9,8 @@ const NavBar = ({onSearch})=>{
       <div className={s.Container}>
         <nav className={s.Nav}>
            <div className={s.Links}>
-              <Link to='/home'> <span className={s.Span}>Home</span> </Link>
-              <Link to='/home/create'> <span className={s.Span}>Crear Pokemon</span> </Link>   
+              <Link className={s.items} to='/home'> <span className={s.Span}>Inicio</span> </Link>
+              <Link  className={s.items} to='/home/create'> <span className={s.Span}>Crear Pokemon</span> </Link>   
             </div>
             <div className={s.SearchBar}><SearchBar onSearch={onSearch}/></div>
         </nav>

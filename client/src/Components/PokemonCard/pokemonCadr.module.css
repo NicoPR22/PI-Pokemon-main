@@ -1,42 +1,104 @@
-.divStile {
-  margin: 20px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  width: 250px;
-  background-color: rgb(242, 247, 248);
-  border: 2px solid black;
-  
-    
+
+.container{
+  width: 280px;
+  height: 600px;
+  margin: 30px;
+}
+
+.redpart{
+  background-color:  #FB1B1B;
+  width: 280px;
+  height: 140px;
+  border-radius: 280px 280px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.whitepart{
+  background-color: #FFFFFF;
+  width: 280px;
+  height: 140px;
+  border-radius: 0 0 280px 280px ;
+  display: inline-block;
+  border-top: 6px solid;
+}
+
+.btn1{
+  position: absolute;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 103px;
+  margin-top: -30px;
+  border-color: black;
+  border-width: 4px;
+  border-style: ridge;
+  z-index: 2;
+
+}
+.btn2{
+  position: relative;
+  display: flex;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 17px;
+  border-color: black;
+  border-width: 3px;
+  border-style: ridge;
+  z-index: 2;
+}
+
+.divStyle {
+  margin: 5px auto ;
+  display: inline-block;
+  width: 280px;
+  z-index: 999;
+  backdrop-filter: blur(3px);
+  background: rgb(255,255,255,0.133);
+  box-shadow: 0 0 6px rgb(29 29 29 / 20%);
+  border-radius: 20px;  
 }
 
 .imgStyle {
   display: flex;
-    width: 150px;
-    height:150p;
-    margin: auto;
-    
-  }
+  width: 130px;
+  height:130p;
+  margin: auto;    
+}
 
 .pStyle {
   justify-content: center;
     display:inline;
     margin:5px 5px;
     flex-direction: row;
-  }
+    color:#0075BE;
+}
 
-  .Idpk{
-    display: flex;
-    flex-direction: row;
-    margin-left:  30px;
-    align-self: auto;
-  }
+.Idpk{
+  color:#0075BE;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  align-self: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-right: none;
+}
 
-  .PkmName{
-    display: flex;
-    justify-content: center;
-  }
+.PkmName{
+  color:#0075BE;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  text-decoration: none;
+}
 
   .Types{
+    margin: 5px;
     display: flex;
     justify-content: center;
   }
@@ -46,10 +108,18 @@
   }
 
   .Ptypes{
+    color:#0075BE;
     display: flex;
     justify-content: center;
   }
-
+  .empty{
+      margin-top: 111px;
+      display: flex;
+      width: 60px;
+      height: 30px;
+      border-radius: 40px 40px 0 0;
+      background-color: #E6BC2F;
+  }
   .UpDiv{
     width: 260px;
     height: 20px;
@@ -69,5 +139,9 @@
         margin: auto;
         align-self: auto;
         margin-bottom: 20px;
+  }
+
+  .link{
+    text-decoration: none;
   }
   

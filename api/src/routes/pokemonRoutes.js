@@ -3,7 +3,7 @@ const {createPokemon, getPokemonsByID, getAllPokemons, getPokemonByName} = requi
 const {Pokemon, Type} = require('../db')
 
 const router = Router();
-/*RESUELVE EL PEDIDOS DE TODOS LOS POKEMONES */
+
 router.get('',async (req,res,next)=>{
     console.log(req.query.name)    
     try {
@@ -22,7 +22,7 @@ router.get('',async (req,res,next)=>{
 })
 
 
-/*RESUELVE UN PEDIDO DE POQUEMON POR ID */
+
 router.get('/:id', async (req,res,next)=>{
     try {
         const id= req.params.id
@@ -33,11 +33,11 @@ router.get('/:id', async (req,res,next)=>{
     }
 })
 
-/*CREA UN NUEVO POKEMON DE USUARIO*/
+
 router.post('',(req,res,next)=>{
     try {
-        const {name,hp,defense,attack,speed,height,weight,types}= req.body
-        let out= createPokemon(name,hp,defense,attack,speed,height,weight,types)
+        const {name,image,hp,defense,attack,speed,height,weight,types}= req.body
+        let out= createPokemon(name.toLowerCase(),image,hp,defense,attack,speed,height,weight,types)
         res.status(200).send('Poquemon creado')    
     } catch (error) {
         next(error)

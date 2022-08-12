@@ -1,26 +1,36 @@
 .Container{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    height: 100%;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    display: flex;
 }
 
 .DivStyle{
-    border: 1px;
-    border-color: black;
-    justify-content: center;
+    background-color: hsl(46, 79%, 54%);
+    justify-content: space-evenly;
     width:100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.PageButons{
-    position: bottom;
-    
+.PageButon{
+    color: rgb(255,255,255,0.133);
+    height: 20px;
+    display: block;
+    margin: auto;
+    width: 350px;
+    margin-left: 470px;
+}
+
+.span{
+    color: #0075BE;}
+
+button {
+    border-radius: 20px;
+    background-color:  #FFCC00;
+    cursor: pointer;
+    width: 80px;
+    height: 25px;
+    border-color: #FFCC00 ;
 }

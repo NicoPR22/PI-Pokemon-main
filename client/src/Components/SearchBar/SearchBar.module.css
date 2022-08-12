@@ -1,0 +1,18 @@
+.text {
+    background-color:  #4DAD5B;
+    border: 1px solid #4DAD5B;
+    border-radius: 20px;
+    color: #ffffff;
+    width: 200px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.button {
+    border-radius: 20px;
+    background-color:  #FFCC00;
+    cursor: pointer;
+    width: 60px;
+    height: 25px;
+    border-color: #FFCC00 ;
+}

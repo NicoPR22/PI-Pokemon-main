@@ -1,7 +1,6 @@
 import s from './App.module.css';
 import axios from 'axios';
-import React, {useState} from 'react';
-import { useSelector, useDispatch} from 'react-redux'
+import React from 'react';
 import {Route, useHistory} from 'react-router-dom';
 import LandingPage from './Components/LandingPage/landingpage';
 import Home from './Components/Home/home';
@@ -14,8 +13,6 @@ import PokemonDetail from './Components/PokemonDatails/Pokemon';
 
 function App() {
   const history = useHistory();
-  const dispatch = useDispatch()
-  const pokemons= useSelector(state=>state.pokemonList)
   const [name,setName] = React.useState({})
   
   const onSearch = (p)=>{

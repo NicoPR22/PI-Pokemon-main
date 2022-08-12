@@ -1,13 +1,10 @@
 .Container{
-  border: 5px solid black;
-  border-radius: 5px;
   display: flex;
-  margin: 5px 105px;
+  
   justify-content: center;
-  background-color: rgb(244, 250, 249);
   padding: 2px;
-  border-top-color: rgb(131, 51, 5);
-  border-left-color: rgb(131, 51, 5);;
+  color:  #0075BE
+  
 }
 
 .DivStyle {
@@ -20,25 +17,87 @@
   }
 
 .Sort {
-  margin: auto;
-    display: inline;
+  display: inline-flex;
+    align-items: baseline;
     
 }
 
 .FilterDiv  {
-  margin: auto;
-  display: inline;
+  display: flex;
+    align-items: end;
 
 }
 
 .SubContainer{
-  margin: auto;
-  display: flex;
+  width: 50%;
+  display: contents
+  
 }
 .FiltLabel{
   margin-right: 10px;
+  font-size: 20px;
 }
 
 .Label{
   margin-right: 2.5px;
+}
+
+.buttons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.select {
+  background-color: #4DAD5B;
+  color: #fff;
+  border-radius: 20px;
+  height: 25px;
+  width: 100px;
+  margin: 10px;
+}
+
+.button {
+  border-radius: 20px;
+  height: 25px;
+  background-color: #E54222;
+  border-color: #E54222;
+  margin-right: 10px;
+  color: #fff;
+}
+
+@media  screen and (max-width: 425px) {
+  .Container{
+    display: contents;
+  }
+
+  .SubContainer{
+    display: grid;
+  }
+
+  .FilterDiv  {
+    
+    display: inline-flex;
+  
+  }
+
+  .Label{
+    width: 100%;
+    text-align: end
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  .Sort {
+    display: grid;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+  }
+  .FiltLabel{
+    margin: none;
+    width: 100%;
+    text-align: center
+  }
 }

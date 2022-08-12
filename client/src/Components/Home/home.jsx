@@ -8,25 +8,6 @@ import s from './Home.module.css'
 
 const Home = () => {
 
-  const container = {
-    position: 'absolute',
-	  width: '100%',
-	  height: '100%',
-    flexDirection: 'row',
-    flexWrap: 'wrap'
-    
-  }
-  
-
-  const divStyle = {
-    width:'100%',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap'
-  };
-
-
   const dispatch = useDispatch()
  
   const source= useSelector(state=>state.pokemonFtrd)
@@ -106,20 +87,19 @@ const Home = () => {
               )
             })
           } 
+        </div> 
 
         {
           source.length>12
           ? 
             <div className={s.PageButons}>
               <button onClick={before}>Anterior</button>
-              <label>  pagina {page + 1}  </label>
+              <span className={s.span}>  pagina {page + 1}  </span>
               <button onClick={next}>Siguiente</button>
             </div>
           : <p></p>
         }
 
-
-        </div> 
       </div>
     );
   };

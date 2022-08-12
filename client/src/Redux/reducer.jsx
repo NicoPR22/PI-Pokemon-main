@@ -1,10 +1,11 @@
-import {CREATE_POKEMON, GET_ALL_POKEMONS ,GET_TYPES, GET_POKEMON_BY_NAME,REMOVE_POKEMON_NAME, TYPE_FILTER,SOURCE_FILTER} from "./actions";
+import {CREATE_POKEMON, GET_ALL_POKEMONS ,GET_TYPES, GET_POKEMON_BY_NAME,REMOVE_POKEMON_NAME, TYPE_FILTER,SOURCE_FILTER,CLEAN_NAME, REMOVE_POKEMON_DB} from "./actions";
 
 const initalState={
     pokemonList:[],
     pokemonTypes:[],
     pokemonName:{},
-    pokemonFtrd:[]
+    pokemonFtrd:[],
+    pokemonDb:[]
 }
 
 function reducer (state=initalState,{ type, payload }) {
@@ -14,6 +15,7 @@ function reducer (state=initalState,{ type, payload }) {
                 ...state,
                 pokemonList: state.pokemonList.concat(payload.sort((a,b)=> ( a.name > b.name? 1 :a.name< b.name? -1: 0))),
                 pokemonFtrd: state.pokemonFtrd.concat(payload.sort((a,b)=> ( a.name > b.name? 1 :a.name< b.name? -1: 0))),
+                pokemonDb: state.pokemonDb.concat(payload.filter(e=> e.id.length>6)),
             }
              
         case GET_TYPES: 
@@ -56,6 +58,18 @@ function reducer (state=initalState,{ type, payload }) {
                 ? state.pokemonList.filter(e=> e.id.length>6)
                 : state.pokemonList
             }
+
+        case CLEAN_NAME:
+            return{
+                ...state,
+                pokemonName:{}
+            }
+
+        case REMOVE_POKEMON_DB:
+            return{
+                ...state,
+                pokemonDb: []
+            } 
     
         default: return state
         

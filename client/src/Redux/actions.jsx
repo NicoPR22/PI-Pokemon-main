@@ -7,6 +7,8 @@ export const GET_POKEMON_BY_NAME = 'GET_POKEMON_BY_NAME'
 export const REMOVE_POKEMON_NAME = 'REMOVE_POKEMON_NAME'
 export const TYPE_FILTER = 'TYPE_FILTER'
 export const SOURCE_FILTER = 'SOURCE_FILTER'
+export const CLEAN_NAME = 'CLEAN_NAME'
+export const REMOVE_POKEMON_DB = 'REMOVE_POKEMON_DB'
 
 
 
@@ -54,4 +56,13 @@ export function sourceFilter(standar) {
     })
 }
 
+export function claeanName(){
+    return(dispatch=>{
+        return(dispatch({type:CLEAN_NAME}))
+    })
+}
+
+export function removePokemonDb() {
+    return { type: REMOVE_POKEMON_DB };
+  }
 

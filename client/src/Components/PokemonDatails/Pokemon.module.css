@@ -1,24 +1,20 @@
 .Container{
-    border: 3px solid black;
     align-items: center;
     display:flex;
     flex-direction: column;
-    background-color: whitesmoke;
+    padding-bottom: 10px;
 }
 
 .DivImage{
-   
     align-items:center;
-    
-    display:inline-block;
+    display:grid;
     box-shadow: 3px black ;
-    width: max-content;
+    
 }
 
-s.Image{
-    
-    height:500px;
-    width:500px
+.imageStyle{
+    width:35vw;
+    margin: auto;
 }
 
 .StatsDiv{
@@ -42,24 +38,44 @@ s.Image{
 }
 
 .SubContainer{
+    width: 60vw;
     align-items: center;
     display: flex;
     flex-direction: row;
+    border: 1px solid #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+    z-index: 999;
+    
+    backdrop-filter: blur(3px);
+    background: rgb(255,255,255,0.133);
+    box-shadow: 0 0 6px rgb(29 29 29 / 20%);
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
-.PokName{
+.pokName{
     display: flex;
     justify-content: center;
+    color:#0075BE;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.PokId{
+.pokId{
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
+    color:#0075BE;
+    width: 100%;
+    text-align: center;
     
 }
 
-.TypeNom{
+.typeNom{
+    margin: 0 auto;
     margin: 5px;
+    color:#0075BE;
 }
 
 .Field{
@@ -76,3 +92,43 @@ s.Image{
     display: flex;
     margin: auto;
 }
+
+.caption {
+    color: #0075BE;
+    font-size: 2.5em;
+    font-weight: bolder;
+  }
+
+  .span {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+    color: #0075BE;
+  }
+
+  .td {
+    width: 100vw;
+    min-width: 4rem;
+    max-width: 4rem;
+    text-align: right;
+    color:  #CE2211;
+  }
+  table {
+   
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    position: relative;
+    margin-top: 3rem;
+  }
+
+  @media  screen and (max-width: 425px) {
+    .SubContainer{
+        display: grid;
+    }
+    .DivImage{
+        display: contents;
+    }
+
+  }

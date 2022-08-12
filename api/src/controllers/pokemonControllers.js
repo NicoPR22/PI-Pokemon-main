@@ -3,7 +3,7 @@ const e = require('express');
 const { Op, where } = require('sequelize');
 const {Pokemon, Type} = require('../db')
 
-const getAllPokemonsAPI = async ()=>{ // ANDA NO TOCAR!
+const getAllPokemonsAPI = async ()=>{ 
     try {
         const {results,next}= (await axios('https://pokeapi.co/api/v2/pokemon')).data//Primeros 20
         let poke = results
@@ -32,7 +32,7 @@ const getAllPokemonsAPI = async ()=>{ // ANDA NO TOCAR!
     }
 }
 
-const getAllPokemonsDB= async ()=>{ // FALTA ARREGLAR LA FORMA DE LOS TIPOS(ES ARREGLO DE OBJETOS TIENE QUE SER ARREGLO DE STRINGS)
+const getAllPokemonsDB= async ()=>{ 
     try {
         let allPokemons= await Pokemon.findAll(
                 {
@@ -145,9 +145,9 @@ const getPokemonByName = async (name)=>{
 
 }
 
-const createPokemon= async (name,hp,defense,attack,speed,height,weight,types)=>{
+const createPokemon= async (name,image,hp,defense,attack,speed,height,weight,types)=>{
     try {
-        const newPokemon= await Pokemon.create({name,hp,defense,attack,speed,height,weight})
+        const newPokemon= await Pokemon.create({name,image,hp,defense,attack,speed,height,weight})
         const typesDB= await Type.findAll({
             where:{ name : {[Op.in]: types} }                                       
         })
