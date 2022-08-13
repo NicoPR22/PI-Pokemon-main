@@ -9,6 +9,7 @@ export const TYPE_FILTER = 'TYPE_FILTER'
 export const SOURCE_FILTER = 'SOURCE_FILTER'
 export const CLEAN_NAME = 'CLEAN_NAME'
 export const REMOVE_POKEMON_DB = 'REMOVE_POKEMON_DB'
+export const FILT = "FILT"
 
 
 
@@ -65,4 +66,9 @@ export function claeanName(){
 export function removePokemonDb() {
     return { type: REMOVE_POKEMON_DB };
   }
+
+export function filtPk(type, source) {
+    return { type: FILT, payload:{type, source} };
+}
+
 

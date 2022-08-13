@@ -1,4 +1,6 @@
-import {CREATE_POKEMON, GET_ALL_POKEMONS ,GET_TYPES, GET_POKEMON_BY_NAME,REMOVE_POKEMON_NAME, TYPE_FILTER,SOURCE_FILTER,CLEAN_NAME, REMOVE_POKEMON_DB} from "./actions";
+import {CREATE_POKEMON, GET_ALL_POKEMONS ,GET_TYPES, GET_POKEMON_BY_NAME,REMOVE_POKEMON_NAME, TYPE_FILTER,SOURCE_FILTER,
+    CLEAN_NAME, REMOVE_POKEMON_DB, FILT} from "./actions";
+import { filtpoks } from "../Assets/util";
 
 const initalState={
     pokemonList:[],
@@ -39,6 +41,12 @@ function reducer (state=initalState,{ type, payload }) {
             return {
                 ...state,
                 pokemonName: {}
+            }
+
+        case FILT:
+            return {
+                ...state,
+                pokemonFtrd: filtpoks(state.pokemonList, payload)      
             }
 
         case TYPE_FILTER:

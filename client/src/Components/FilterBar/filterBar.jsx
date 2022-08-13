@@ -2,16 +2,32 @@ import React from 'react'
 import { useSelector} from 'react-redux';
 import s from './FilterBar.module.css'
 
-const FilterBar = ({sortBy, invert, filter, filterBySrc})=> {
+const FilterBar = ({sortBy, invert, filter, filterBySrc, filterHandler})=> {
 
     const types = useSelector(state=>state.pokemonTypes)
+
+    const handleChangeType = (e)=> {
+        e.preventDefault()
+        let source = document.getElementById('source').value
+        console.log("filterbar source " + source)
+        filterHandler(e.target.value, source)
+        //filter(e)
+    }
+
+    const handleChangeSource = (e)=> {
+        e.preventDefault()
+        let type = document.getElementById('type').value
+        filterHandler(type, e.target.value)
+       // filterBySrc(e)
+    }
+
     return(
         <div className={s.Container}>
             <div className={s.SubContainer}>
                 <label className={s.FiltLabel}>Filtrar por:</label>
                 <div className={s.FilterDiv}>
                     <label className={s.Label}>Tipo</label>
-                    <select className={s.select} name="" id="" onChange={e=>filter(e)}>
+                    <select className={s.select} name="" id="type" onChange={e=> handleChangeType(e)}>
                         <optgroup>
                             <option id="" value="all">Todos</option>
                             {
@@ -22,7 +38,7 @@ const FilterBar = ({sortBy, invert, filter, filterBySrc})=> {
                 </div>
                 <div className={s.FilterDiv}>
                     <label className={s.Label}>Origen</label>
-                    <select className={s.select} name="" id="" onChange={e=>{filterBySrc(e)}}>
+                    <select className={s.select} name="" id="source" onChange={e=>{handleChangeSource(e)}}>
                         <optgroup>
                             <option value="all">Todos</option>
                             <option value="api">Api</option>

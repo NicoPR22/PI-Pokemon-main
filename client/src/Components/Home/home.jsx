@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch} from 'react-redux'
-import { sourceFilter, typeFilter } from '../../Redux/actions';
+import { sourceFilter, typeFilter, filtPk } from '../../Redux/actions';
 import FilterBar from '../FilterBar/filterBar';
 import PokemonCard from '../PokemonCard/pokemonCard'
 import s from './Home.module.css'
@@ -44,6 +44,12 @@ const Home = () => {
     }
   }
 
+  const filterHandler = (type, source)=>{
+    dispatch(filtPk(type, source))
+    //setPoks(source)
+    setPage(0)
+  }
+
   const filter = (e)=>{
     e.preventDefault()
     dispatch(typeFilter(e.target.value))
@@ -64,6 +70,10 @@ const Home = () => {
           page + 1
         )
       }
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
         
   const before = ()=> {
@@ -72,13 +82,17 @@ const Home = () => {
           page - 1
         )
      }
+     window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
     }
 
   const section = pokemons.length>0? pokemons.slice(pages[page][0],pages[page][1]):[]
        
     return (
      <div  className={s.Container}>     
-        <FilterBar sortBy={sortBy} invert={invert} filter={filter} filterBySrc={filterBySrc}/>
+        <FilterBar sortBy={sortBy} invert={invert} filter={filter} filterBySrc={filterBySrc} filterHandler={filterHandler}/>
         <div  className={s.DivStyle}>
           {           
             section&&section.map(e=>{
